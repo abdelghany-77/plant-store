@@ -40,7 +40,6 @@ Welcome to the Plant Store, a fully functional e-commerce website built with PHP
 - **Backend**:
   - PHP (Object-Oriented Programming)
   - MySQL for database management
-  - PDO for secure database interactions
 
 - **Tools**:
   - XAMPP (for local development)
@@ -51,22 +50,4 @@ Welcome to the Plant Store, a fully functional e-commerce website built with PHP
 ## **Screenshots**
 
 ### Home Page
-![Home Page](screenshots/home.png)
-
-### Product Page
-![Product Page](screenshots/products.png)
-
-### Cart Page
-![Cart Page](screenshots/cart.png)
-
-### Login Page
-![Login Page](screenshots/login.png)
-
----
-
-## **How to Run the Project**
-
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/your-username/plant-store.git
-   cd plant-store
+![plant](https://github.com/user-attachments/assets/92ee1667-757c-4a8c-ab2e-928e255ec33f)
