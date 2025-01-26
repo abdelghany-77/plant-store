@@ -1,6 +1,6 @@
 # 🌱 Plant Store - E-commerce Website
 
-Welcome to the Plant Store, a fully functional e-commerce website built with PHP, HTML, CSS, and JavaScript. This project demonstrates my skills in backend development, database management, and user authentication. It also includes features like cart management, product listing, and responsive design.
+Welcome to the Plant Store, a fully functional e-commerce website built with PHP, HTML, CSS, and JavaScript. This project demonstrates my backend development, database management, and user authentication skills. It also includes cart management, product listing, and responsive design.
 
 ---
 
@@ -51,3 +51,10 @@ Welcome to the Plant Store, a fully functional e-commerce website built with PHP
 
 ### Home Page
 ![plant](https://github.com/user-attachments/assets/92ee1667-757c-4a8c-ab2e-928e255ec33f)
+
+### Login page
+![4](https://github.com/user-attachments/assets/9a6eaad6-d0e2-4a5b-8f6d-de47e6b618e7)
+### Register error handling
+![8](https://github.com/user-attachments/assets/fb355565-213d-41bd-baae-d8cc4051b4d9)
+### checkout page
+![7](https://github.com/user-attachments/assets/4e587df0-c1cc-4e9f-9d8b-df3f6cde2c5e)
