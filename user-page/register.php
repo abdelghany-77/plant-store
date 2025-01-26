@@ -8,11 +8,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $password = $_POST['password'];
 
   $user = new User();
-  if ($user->register($username, $email, $password)) {
+  $result = $user->register($username, $email, $password);
+  if ($result === true) {
+    // Registration successful
+    $_SESSION['message'] = "Registration successful! You can now log in.";
     header("Location: login.php");
     exit();
   } else {
-    $error = "Registration failed.";
+    // Registration failed, display errors
+    $errors = $result;
   }
 }
 ?>
@@ -72,32 +76,37 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <!--==================== REGISTER ====================-->
   <section class="section register">
     <div class="register__container container grid">
-      <div class="register__data">
-        <h1 class="register__title">Register</h1>
-        <?php if (isset($error)): ?>
-          <p class="register__error"><?php echo $error; ?></p>
-        <?php endif; ?>
-        <form method="POST" class="register__form">
-          <div class="register__content">
-            <input type="text" name="username" placeholder=" " class="register__input" required />
-            <label for="username" class="register__label">Username</label>
-          </div>
-          <div class="register__content">
-            <input type="email" name="email" placeholder=" " class="register__input" required />
-            <label for="email" class="register__label">Email</label>
-          </div>
-          <div class="register__content">
-            <input type="password" name="password" placeholder=" " class="register__input" required />
-            <label for="password" class="register__label">Password</label>
-          </div>
-          <button type="submit" class="button button--flex register__button">
-            Register <i class="ri-arrow-right-down-line button__icon"></i>
-          </button>
-        </form>
-        <p class="register__login">
-          Already have an account? <a href="login.php">Login here</a>
-        </p>
-      </div>
+      <h1 class="register__title">Register</h1>
+      <!-- Display Errors -->
+      <?php if (!empty($errors)): ?>
+        <div class="register__errors">
+          <?php foreach ($errors as $error): ?>
+            <p class="register__error"><?php echo $error; ?></p>
+          <?php endforeach; ?>
+        </div>
+      <?php endif; ?>
+      <!-- Registration Form -->
+      <form method="POST" class="register__form">
+        <div class="register__content">
+          <input type="tex" name="username" placeholder=" " class="register__input" required />
+          <label for="username" class="register__label">Username</label>
+        </div>
+        <div class="register__content">
+          <input type="email" name="email" placeholder=" " class="register__input" required />
+          <label for="email" class="register__label">Email</label>
+        </div>
+        <div class="register__content">
+          <input type="password" name="password" placeholder=" " class="register__input" required />
+          <label for="password" class="register__label">Password</label>
+        </div>
+        <button type="submit" class="button button--flex register__button">
+          Register <i class="ri-arrow-right-down-line button__icon"></i>
+        </button>
+      </form>
+
+      <p class="register__login">
+        Already have an account? <a href="login.php">Login here</a>
+      </p>
     </div>
   </section>
 

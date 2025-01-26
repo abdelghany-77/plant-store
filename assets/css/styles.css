@@ -375,6 +375,7 @@ the website, in dark theme
   border-radius: .5rem;
   font-weight: var(--font-medium);
   transition: .3s;
+  margin: 7px;
 }
 
 .button:hover{
@@ -1088,6 +1089,7 @@ the website, in dark theme
 .checkout__title {
     font-size: var(--h1-font-size);
     margin-bottom: var(--mb-1);
+    text-align: center;
 }
 
 .login__error,
@@ -1175,7 +1177,6 @@ the website, in dark theme
 }
 
 .checkout__item {
-    font-size: var(--small-font-size);
     color: var(--text-color);
     margin-bottom: var(--mb-0-5);
 }
@@ -1200,4 +1201,81 @@ the website, in dark theme
 .cart__remove-button {
     padding: 0.5rem 1rem;
     font-size: var(--small-font-size);
+}
+
+/*=============== REGISTER ===============*/
+.register__errors {
+    margin-bottom: var(--mb-1);
+    padding: 1rem;
+    background-color: #ffebee;
+    border: 1px solid #ffcdd2;
+    border-radius: 0.5rem;
+}
+
+.register__error {
+    color: #c62828;
+    font-size: var(--small-font-size);
+    margin-bottom: var(--mb-0-5);
+}
+
+/*=============== CART COUNTER ===============*/
+.cart-counter {
+    background-color: var(--first-color);
+    color: #fff;
+    font-size: var(--smaller-font-size);
+    text-align: center;
+    font-size: larger;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 20px;
+}
+
+.cart__title{
+  text-align: center;
+}
+
+/*=============== CHECKOUT ===============*/
+.checkout__items {
+    list-style: none;
+    margin-bottom: var(--mb-2);
+}
+
+.checkout__item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--text-color-light);
+    border-radius: 0.5rem;
+    margin-bottom: var(--mb-1);
+}
+
+.checkout__item-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.checkout__item-details {
+    flex: 1;
+}
+
+.checkout__item-name {
+    font-size: var(--h3-font-size);
+    margin-bottom: var(--mb-0-5);
+}
+
+.checkout__item-quantity,
+.checkout__item-price {
+    font-size: var(--small-font-size);
+    color: var(--text-color);
+}
+
+.checkout__item-price {
+    font-weight: var(--font-semi-bold);
 }

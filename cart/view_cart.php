@@ -71,7 +71,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_quantity'])) {
           <i class="ri-close-line"></i>
         </div>
       </div>
-
       <div class="nav__btns">
         <!-- Theme change button -->
         <i class="ri-moon-line change-theme" id="theme-button"></i>
@@ -98,14 +97,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_quantity'])) {
               <!-- Update Quantity Form -->
               <form action="view_cart.php" method="POST" class="cart__quantity-form">
                 <input type="hidden" name="cart_id" value="<?php echo $item['id']; ?>" />
-                <input type="number" name="quantity" value="<?php echo $item['quantity']; ?>" min="1" class="cart__quantity-input" />
+                <input type="number" name="quantity" value="<?php echo $item['quantity']; ?>" min="1" class="cart-counter" />
                 <button type="submit" name="update_quantity" class="button button--flex cart__update-button">
                   Update <i class="ri-refresh-line"></i>
                 </button>
-              </form>
-
-              <!-- Remove Item Form -->
-              <form action="view_cart.php" method="POST" class="cart__remove-form">
                 <input type="hidden" name="cart_id" value="<?php echo $item['id']; ?>" />
                 <button type="submit" name="remove_item" class="button button--flex cart__remove-button">
                   Remove <i class="ri-delete-bin-line"></i>

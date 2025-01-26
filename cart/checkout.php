@@ -77,7 +77,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           <ul class="checkout__items">
             <?php foreach ($cart_items as $item): ?>
               <li class="checkout__item">
-                Product ID: <?php echo $item['product_id']; ?> - Quantity: <?php echo $item['quantity']; ?>
+                <?php echo $item['name']; ?>
+                <br>
+                Quantity = <?php echo $item['quantity']; ?>
+                <br>
+                The Total Price = $<?php echo $item['price'] * $item['quantity']; ?>
               </li>
             <?php endforeach; ?>
           </ul>
